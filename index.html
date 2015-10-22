@@ -12,16 +12,64 @@
 <body>
 
 	<div id="slides-container">
-		<div id="slides">
+		<div id="slides" 	data-0="transform:translate(0%,0%);"
+						    
+						    data-150p="transform:translate(0%,-50%);"
+						    data-200p=""
+						    data-300p="transform:translate(-50%,-50%);"
+						    data-350p=""
+						    data-450p="transform:translate(-50%,0%);">
 			
-			<div id="slide-1" class="slide"></div>
-	        <div id="slide-2" class="slide"></div>
-	        <div id="slide-3" class="slide"></div>
-	        <div id="slide-4" class="slide"></div>
+			<div id="slide-1" class="slide">
+				<div class="caption" 	data-40p="opacity: 1; transform:translate(0px,0px);"
+									    data-70p="opacity: 0; transform:translate(0px,-100%);"
+									    data-anchor-target="#helper">
+
+					<h1>Image 1 Title</h1>
+				    <p>Image description goes here.</p>
+				</div>
+			</div>
+	        <div id="slide-2" class="slide" data-130p="opacity: 0; transform:translate(0px,-200%);"
+										    data-180p="opacity: 1; transform:translate(0px,0px);"
+										    data-250p=""
+										    data-280p="opacity: 0; transform:translate(-100px,0px);"
+										    data-anchor-target="#helper">
+	        	<div class="caption">
+				    <h1>Image 1 Title</h1>
+				    <p>Image description goes here.</p>
+				</div>
+	        </div>
+	        <div id="slide-3" class="slide">
+	        	<div class="caption" 	data-250p="opacity: 0; transform:translate(300px,0px);"
+									    data-300p="opacity: 1; transform:translate(0px,0px);"
+									    data-anchor-target="#helper">
+				    <h1>Image 1 Title</h1>
+				    <p>Image description goes here.</p>
+				</div>
+	        </div>
+	        <div id="slide-4" class="slide">
+	        	<div class="caption" 	data-430p="opacity: 0;"
+									    data-450p="opacity: 1;"
+									    data-anchor-target="#helper">
+				    <h1>Image 1 Title</h1>
+				    <p>Image description goes here.</p>
+				</div>
+	        </div>
 
 		</div>
 	</div>
 
+	<div id="helper">
+	    <div class="marker red"></div>
+	    <div class="marker green"></div>
+	    <div class="marker blue"></div>
+	    <div class="marker yellow"></div>
+	</div>
 
+	<!-- Include Skrollr.js -->
+	<script src="javascripts/skrollr.js"></script>
+	<script type="text/javascript">
+	    var s = skrollr.init();
+	</script>
 </body>
 </html>
