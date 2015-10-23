@@ -164,44 +164,45 @@ p, h1 {
 /* line 92, ../sass/screen.scss */
 h1 {
   margin-bottom: 0.2em;
+  font-size: 3em;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 96, ../sass/screen.scss */
 p {
   line-height: 1.333em;
 }
 
-/* line 98, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #helper {
   position: absolute;
   left: 0;
   top: 0;
   height: 600%;
-  width: 0;
+  width: 10px;
 }
 
-/* line 107, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 .marker {
   height: 25%;
   width: 100%;
 }
 
-/* line 111, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .red {
   background-color: red;
 }
 
-/* line 114, ../sass/screen.scss */
+/* line 116, ../sass/screen.scss */
 .green {
   background-color: green;
 }
 
-/* line 117, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .blue {
   background-color: blue;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .yellow {
   background-color: yellow;
 }
