@@ -8,8 +8,17 @@
 	<!--[if IE]>
 	  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	<![endif]-->
+	
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
+	
+	<progress value="0">
+	  <div class="progress-container">
+	    <span class="progress-bar"></span>
+	  </div>
+	</progress>
 
 	<div id="slides-container">
 		<div id="slides" 	data-0="transform:translate(0%,0%);"
@@ -65,7 +74,7 @@
 				    <h1>Image 1 Title</h1>
 				    <p>Image description goes here.</p>
 				</div>
-				
+
 	        </div>
 
 		</div>
@@ -80,8 +89,65 @@
 
 	<!-- Include Skrollr.js -->
 	<script src="javascripts/skrollr.js"></script>
+	
+	
 	<script type="text/javascript">
 	    var s = skrollr.init();
+
+	    $(document).ready(function() {
+	        
+	      var getMax = function(){
+	        return $(document).height() - $(window).height();
+	      }
+	        
+	      var getValue = function(){
+	        return $(window).scrollTop();
+	      }
+	        
+	      if ('max' in document.createElement('progress')) {
+	        // Browser supports progress element
+	        var progressBar = $('progress');
+	            
+	        // Set the Max attr for the first time
+	        progressBar.attr({ max: getMax() });
+
+	        $(document).on('scroll', function(){
+	          // On scroll only Value attr needs to be calculated
+	          progressBar.attr({ value: getValue() });
+	        });
+	          
+	        $(window).resize(function(){
+	          // On resize, both Max/Value attr needs to be calculated
+	          progressBar.attr({ max: getMax(), value: getValue() });
+	        }); 
+	      
+	      } else {
+
+	        var progressBar = $('.progress-bar'), 
+	            max = getMax(), 
+	            value, width;
+	            
+	        var getWidth = function() {
+	          // Calculate width in percentage
+	          value = getValue();            
+	          width = (value/max) * 100;
+	          width = width + '%';
+	          return width;
+	        }
+	            
+	        var setWidth = function(){
+	          progressBar.css({ width: getWidth() });
+	        }
+	            
+	        $(document).on('scroll', setWidth);
+	        $(window).on('resize', function(){
+	          // Need to reset the Max attr
+	          max = getMax();
+	          setWidth();
+	        });
+	      }
+	    });
+	    
 	</script>
 </body>
 </html>
