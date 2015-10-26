@@ -67,14 +67,51 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 8, ../sass/screen.scss */
+/* line 1, ../sass/_progress_bar.scss */
+progress {
+  /* Positioning */
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* Dimensions */
+  width: 100%;
+  height: 5px;
+  /* Reset the appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Get rid of the default border in Firefox/Opera. */
+  border: none;
+  /* Progress bar container for Firefox/IE10+ */
+  background-color: transparent;
+  /* Progress bar value for IE10+ */
+  color: #BBF6F7;
+  z-index: 1;
+}
+
+/* line 27, ../sass/_progress_bar.scss */
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+/* line 31, ../sass/_progress_bar.scss */
+progress::-webkit-progress-value {
+  background-color: red;
+}
+
+/* line 35, ../sass/_progress_bar.scss */
+progress::-moz-progress-bar {
+  background-color: red;
+}
+
+/* line 9, ../sass/screen.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
 /* full width/height container */
-/* line 14, ../sass/screen.scss */
+/* line 15, ../sass/screen.scss */
 #slides-container {
   width: 100%;
   height: 100%;
@@ -82,7 +119,7 @@ html, body {
 }
 
 /* double the height/width of a viewport */
-/* line 21, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 #slides {
   width: 200%;
   height: 200%;
@@ -91,7 +128,7 @@ html, body {
   left: 0;
 }
 
-/* line 31, ../sass/screen.scss */
+/* line 32, ../sass/screen.scss */
 .slide {
   position: absolute;
   top: 0;
@@ -100,13 +137,13 @@ html, body {
   height: 50%;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 #slide-1 {
   background: url("../images/ina_portrait.jpg") no-repeat center center;
   background-size: cover;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #slide-2 {
   background: url("../images/anita_portrait.jpg") no-repeat center center;
   background-size: cover;
@@ -115,7 +152,7 @@ html, body {
   transform: translate(0, 100%);
 }
 
-/* line 52, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 #slide-3 {
   background: url("../images/ellie_portrait.jpg") no-repeat center center;
   background-size: cover;
@@ -123,14 +160,14 @@ html, body {
   -ms-transform: translate(100%, 100%);
   transform: translate(100%, 100%);
 }
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 #slide-3 .caption {
   left: 5%;
   right: auto;
   color: #47373f;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 #slide-4 {
   background: url("../images/anita_portrait2.jpg") no-repeat center center;
   background-size: cover;
@@ -138,7 +175,7 @@ html, body {
   -ms-transform: translate(100%, 0%);
   transform: translate(100%, 0%);
 }
-/* line 74, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 #slide-4 .caption {
   right: auto;
   left: 5%;
@@ -147,7 +184,7 @@ html, body {
   color: #47373f;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 .caption {
   position: absolute;
   bottom: 5%;
@@ -156,23 +193,23 @@ html, body {
   color: #fff;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 p, h1 {
   margin: 0;
 }
 
-/* line 92, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 h1 {
   margin-bottom: 0.2em;
   font-size: 3em;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 p {
   line-height: 1.333em;
 }
 
-/* line 100, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 #helper {
   position: absolute;
   left: 0;
@@ -181,48 +218,28 @@ p {
   width: 0;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 .marker {
   height: 25%;
   width: 100%;
 }
 
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 .red {
   background-color: red;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .green {
   background-color: green;
 }
 
-/* line 119, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 .blue {
   background-color: blue;
 }
 
-/* line 122, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 .yellow {
   background-color: yellow;
-}
-
-/* line 127, ../sass/screen.scss */
-.progress-container {
-  width: 100%;
-  background-color: transparent;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  display: block;
-  z-index: 100;
-}
-
-/* line 137, ../sass/screen.scss */
-.progress-bar {
-  background-color: red;
-  width: 0%;
-  display: block;
-  height: inherit;
 }
