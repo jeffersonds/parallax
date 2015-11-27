@@ -243,3 +243,70 @@ p {
 .yellow {
   background-color: yellow;
 }
+
+/* line 131, ../sass/screen.scss */
+section {
+  margin: auto;
+  clear: both;
+  width: 988px;
+}
+
+/* line 137, ../sass/screen.scss */
+#barra-lateral {
+  float: left;
+  width: 316px;
+}
+
+/* line 142, ../sass/screen.scss */
+.container_ig {
+  width: 652px;
+}
+
+/* line 146, ../sass/screen.scss */
+#home {
+  background: url(../images/ina_portrait.jpg) 50% 0 repeat fixed;
+  min-height: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+}
+
+/* line 155, ../sass/screen.scss */
+section h1 {
+  font-size: 9em;
+  color: #fff;
+  margin: 0 30%;
+}
+
+/* line 161, ../sass/screen.scss */
+#home article {
+  height: 458px;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 100%;
+}
+
+/* line 169, ../sass/screen.scss */
+#about {
+  background: url(../images/anita_portrait.jpg) 50% 0 repeat fixed;
+  min-height: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  position: relative;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+/* line 180, ../sass/screen.scss */
+#about article {
+  height: 458px;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  width: 100%;
+}

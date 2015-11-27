@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Parallax 2</title>
+
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+	<!--[if IE]>
+	  <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+
+</head>
+<body>
+	
+	<section id="corpo">
+
+		<div class="container_ig">
+			<section id="home" data-type="background" data-speed="10" class="pages">     
+		         <article>
+		         	<h1>Quis at illum impedit eligendi.</h1>
+		         </article>
+		    </section>   
+		     
+			<section id="about" data-type="background" data-speed="10" class="pages">
+			         <article>
+			         	<h1>Consectetur nostrum porro iusto unde.</h1>
+			         </article>
+			</section>
+
+			<section id="about" data-type="background" data-speed="10" class="pages">
+			         <article>
+			         	<h1>Consectetur nostrum porro iusto unde.</h1>
+			         </article>
+			</section>
+		</div>
+
+		<aside id="barra-lateral">
+			
+		</aside>
+	</section>
+
+	<script type="text/javascript">
+	   $(document).ready(function(){
+	   		var $window = $(window);
+
+		    $('section[data-type="background"]').each(function(){
+		        var $bgobj = $(this); // assigning the object
+		    
+		        $(window).scroll(function() {
+		            var yPos = -($window.scrollTop() / $bgobj.data('speed')); 
+		            
+		            // Put together our final background position
+		            var coords = '20% '+ yPos + 'px';
+
+		            // Move the background
+		            $bgobj.css({ backgroundPosition: coords });
+		        }); 
+		    });    
+		});
+	</script>
+
+</body>
+</html>

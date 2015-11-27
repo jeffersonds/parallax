@@ -123,3 +123,64 @@ p { line-height: 1.333em; }
 .yellow {
     background-color: yellow;
 }
+
+
+
+
+
+section {
+    margin: auto;
+    clear: both;
+    width: 988px;
+}
+
+#barra-lateral {
+    float: left;
+    width: 316px;
+}
+
+.container_ig {
+    width: 652px;
+}
+
+#home { 
+  background: url(../images/ina_portrait.jpg) 50% 0 repeat fixed; min-height: 1000px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative;
+}
+
+section h1 {
+    font-size: 9em;
+    color: #fff;
+    margin:0 30%;
+}
+
+#home article { 
+  height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 150px; 
+  width: 100%;
+}
+ 
+#about { 
+  background: url(../images/anita_portrait.jpg) 50% 0 repeat fixed; min-height: 1000px;
+  height: 1000px; 
+  margin: 0 auto; 
+  width: 100%; 
+  max-width: 1920px; 
+  position: relative; 
+  -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+ 
+#about article { 
+  height: 458px; 
+  position: absolute; 
+  text-align: center; 
+  top: 150px; 
+  width: 100%; 
+}
